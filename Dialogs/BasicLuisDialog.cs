@@ -44,10 +44,9 @@ namespace Microsoft.Bot.Sample.LuisBot
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("123456000 - 104 000 EUR");
-            sb.AppendLine("234567000 - 235 000 USD");
-            sb.AppendLine("456789000 - 453 000 EUR");
-            sb.AppendLine("Totatl blance is 559 000 EUR and 235 000 USD.");
+            sb.AppendLine("Current account is 104000 EUR.");
+            sb.AppendLine("Salary account is 453000 EUR.");
+            sb.AppendLine("Total balance is 557000 EUR.");
 
             await context.PostAsync(sb.ToString());
             context.Wait(MessageReceived);
@@ -58,9 +57,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("150 000 EUR for UPS Invoice 45 / 2017");
-            sb.AppendLine("217 000EUR for Innogy Invoice 12 / 2017");
-            sb.AppendLine("3 400 EUR for T mobile Telephone bill september - 2017");
+            sb.AppendLine("150000 EUR for UPS its an Invoice 45/2017 and 3400 EUR for T mobile its a Telephone bill september 2017");
             sb.AppendLine("Do you want to accept these payments?");
 
             await context.PostAsync(sb.ToString());
@@ -73,7 +70,7 @@ namespace Microsoft.Bot.Sample.LuisBot
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("All transaction has been accepted.");
-            sb.AppendLine("I want to remind you that your card expires next month. Do you want to renew it or would you like a new Visa Bussines Gold with 50000 EUR limit.");
+            sb.AppendLine("I want to remind you that your card expires next month.Do you want to renew it or would you like a new Visa Business Gold with 50000 EUR limit.");
 
             await context.PostAsync(sb.ToString());
             context.Wait(MessageReceived);
