@@ -84,7 +84,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("Ok.And by the way please note that tomorrow you need to pay taxes.Do you want do it now?");
+            sb.AppendLine("Ok. By the way please note that tomorrow you need to pay taxes. Do you want do it now?");
 
             await context.PostAsync(sb.ToString());
             context.Wait(MessageReceived);
