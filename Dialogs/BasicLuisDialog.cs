@@ -92,7 +92,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("Goodbye, Dominik.");
+            sb.AppendLine("Goodbye Dominik.");
 
             await context.PostAsync(sb.ToString());
             context.Wait(MessageReceived);
