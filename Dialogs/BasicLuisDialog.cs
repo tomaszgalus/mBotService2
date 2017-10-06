@@ -2,7 +2,6 @@ using System;
 using System.Text;
 using System.Configuration;
 using System.Threading.Tasks;
-
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
@@ -28,7 +27,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         [LuisIntent("Hello")]
         public async Task HelloIntent(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync($"Hello <b>Dominik</b>. Nice to hear you again. What do you want to do?");
+            await context.PostAsync($"Hello Dominik. Nice to hear you again. What do you want to do?");
             context.Wait(MessageReceived);
         }
 
@@ -70,7 +69,7 @@ namespace Microsoft.Bot.Sample.LuisBot
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("All transaction has been accepted.");
-            sb.AppendLine("I want to remind you that your card expires next month. Do you want to renew it or would you like a new Visa Business Gold with 50000 EUR limit.");
+            sb.AppendLine("I want to remind you that your card expires next month. Do you want to renew it or would you like a new Mastercard Business Gold with 50000 EUR limit.");
 
             await context.PostAsync(sb.ToString());
             context.Wait(MessageReceived);
