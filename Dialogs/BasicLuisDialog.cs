@@ -20,7 +20,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         [LuisIntent("None")]
         public async Task NoneIntent(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync($"Please specify the query :).");
+            await context.PostAsync($"What do you mean?");
             context.Wait(MessageReceived);
         }
 
@@ -56,7 +56,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("150000 EUR for UPS its an Invoice 45/2017 and 3400 EUR for T mobile its a Telephone bill september 2017");
+            sb.AppendLine("150 EUR for UPS its an Invoice 45/2017 and 340 EUR for T mobile its a Telephone bill september 2017");
             sb.AppendLine("Do you want to accept these payments?");
 
             await context.PostAsync(sb.ToString());
