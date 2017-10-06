@@ -75,7 +75,7 @@ namespace Microsoft.Bot.Sample.LuisBot
             context.Wait(MessageReceived);
         }
 
-        [LuisIntent("Visa")]
+        [LuisIntent("Mastercard")]
         public async Task VisaIntent(IDialogContext context, LuisResult result)
         {
             StringBuilder sb = new StringBuilder();
