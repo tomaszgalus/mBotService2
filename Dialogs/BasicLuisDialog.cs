@@ -28,7 +28,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         [LuisIntent("Hello")]
         public async Task HelloIntent(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync($"Hello Dominik. Nice to hear you again. What do you want to do?");
+            await context.PostAsync($"Hello <b>Dominik</b>. Nice to hear you again. What do you want to do?");
             context.Wait(MessageReceived);
         }
 
