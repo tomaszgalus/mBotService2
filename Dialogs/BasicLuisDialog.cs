@@ -86,6 +86,7 @@ namespace Microsoft.Bot.Sample.LuisBot
             context.Wait(MessageReceived);
         }
 
+
         [LuisIntent("Goodbye")]
         public async Task GoodbyeIntent(IDialogContext context, LuisResult result)
         {
