@@ -70,7 +70,7 @@ namespace Microsoft.Bot.Sample.LuisBot
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("All transaction has been accepted.");
-            sb.AppendLine("I want to remind you that your card expires next month.Do you want to renew it or would you like a new Visa Business Gold with 50000 EUR limit.");
+            sb.AppendLine("I want to remind you that your card expires next month. Do you want to renew it or would you like a new Visa Business Gold with 50000 EUR limit.");
 
             await context.PostAsync(sb.ToString());
             context.Wait(MessageReceived);
@@ -81,7 +81,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         {
             StringBuilder sb = new StringBuilder();
 
-            sb.AppendLine("Ok. By the way, please note that tomorrow you need to pay taxes. Do you want do it now?");
+            sb.AppendLine("Ok, by the way, please note that tomorrow you need to pay taxes. Do you want do it now?");
 
             await context.PostAsync(sb.ToString());
             context.Wait(MessageReceived);
